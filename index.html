@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--&lt;!&ndash;    <form>&ndash;&gt;-->
+<!--        <div id="d1">-->
+<!--            <h3>Amount</h3>-->
+<!--            <input type="text" id="amount" placeholder="Nhập số tiền">-->
+<!--        </div>-->
+<!--        <div id="d2">-->
+<!--            <h3>From Currency</h3>-->
+<!--            <select>-->
+<!--                <option value="1" class="From" id="VND">VietNamDong</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div id="d3">-->
+<!--            <h3>To Currency</h3>-->
+<!--            <select>-->
+<!--                <option value="23000" id="USD">USD</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div id="d4"><button onclick="ds" type="submit" >Convert</button></div>-->
+
+<!--&lt;!&ndash;    </form>&ndash;&gt;-->
+
+<table>
+    <tr>
+        <th> Amount <br/>
+            <input id="amout" type="text">
+
+        </th>
+        <th>From Currency <br/>
+            <select id="sl1">
+                <option value="1" name="VNĐ">VNĐ</option>
+                <option value="23000" name="USD">USD</option>
+                <option value="3300" name="NDT">Nhân dân tệ</option>
+                <option value="4000" name="Yên">Yên Nhật</option>
+            </select>
+        </th>
+        <th> To Currency <br/>
+            <select id="sl2" >
+                <option value="23000" name="VNĐ">USD</option>
+                <option value="3300" name="USD">Nhân dân tệ</option>
+                <option value="1" name="NDT">VNĐ</option>
+                <option value="4000" name="Yên">Yên Nhật</option>
+            </select>
+        </th>
+
+        <th style="position: relative;top: 10px;"><button onclick="ds()" style="background-color: aqua" >Convert</button></th>
+    </tr>
+</table>
+<p id="show"></p>
+    <script>
+
+       function ds(){
+           let from=document.getElementById("sl1").value;
+           let to=document.getElementById("sl2").value;
+           let amount=document.getElementById("amout").value;
+           let result=(amount*from)/to;
+
+               document.getElementById('show').innerText = "result: " + result;
+
+
+
+           // document.write('result = '+result);
+       }
+    </script>
+</body>
+</html>
