@@ -45,7 +45,7 @@
             <select id="sl2" >
                 <option value="23000" name="VNĐ">USD</option>
                 <option value="3300" name="USD">Nhân dân tệ</option>
-                <option value="1" name="NDT">VNĐ</option>
+                <option value="1" name="NDT"> VNĐ</option>
                 <option value="4000" name="Yên">Yên Nhật</option>
             </select>
         </th>
@@ -60,13 +60,14 @@
            let from=document.getElementById("sl1").value;
            let to=document.getElementById("sl2").value;
            let amount=document.getElementById("amout").value;
+           let name=document.getElementById("sl2").options[document.getElementById("sl2").selectedIndex].text;
+           console.log(name)
            let result=(amount*from)/to;
-
-               document.getElementById('show').innerText = "result: " + result;
-
+           document.getElementById('show').innerText = "result:" + result +" "+ name ;
 
 
-           // document.write('result = '+result);
+
+
        }
     </script>
 </body>
